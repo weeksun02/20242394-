@@ -11,14 +11,14 @@
 #define PROB_MAX 90
 #define AGGRO_MIN 0
 #define AGGRO_MAX 9
-//¸¶µ¿¼® ÀÌµ¿¹æÇâ
+//ë§ˆë™ì„ ì´ë™ë°©í–¥
 #define MOVE_LEFT 1
 #define MOVE_STAY 0
-//Á»ºñÀÇ °ø°İ´ë»ó
+//ì¢€ë¹„ì˜ ê³µê²©ëŒ€ìƒ
 #define ATK_NONE 0
 #define ATK_CITIZEN 1
 #define ATK_DONGSEOK 2
-//¸¶µ¿¼® Çàµ¿
+//ë§ˆë™ì„ í–‰ë™
 #define ACTION_REST 0
 #define ACTION_PROVOKE 1
 #define ACTION_PULL 2
@@ -89,9 +89,9 @@ int main(void) {
 
 
 		moveall();
-		mamove();
+		mamove();//2-4
 
-		Sleep(4000); ///sleep¾ø¾Ö±â!!!
+		Sleep(4000);
 
 		j++;
 	}
@@ -192,7 +192,7 @@ void start2() {
 	printf("#");
 
 }
-void busanhang2() { //µÎ¹øÂ° ÁÙ Ãâ·ÂÇÏ´Â ÇÔ¼ö
+void busanhang2() { //ë‘ë²ˆì§¸ ì¤„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
 
 	perccent();
 	printf("#");
@@ -206,7 +206,7 @@ void busanhang2() { //µÎ¹øÂ° ÁÙ Ãâ·ÂÇÏ´Â ÇÔ¼ö
 	printf("#");
 }
 
-void busanhang3() { //º¯ÇÏÁö ¾Ê´Â ±âÂ÷
+void busanhang3() { //ë³€í•˜ì§€ ì•ŠëŠ” ê¸°ì°¨
 	for (int i = 1; i <= length; i++) {
 		train[i] = '#';
 	}
@@ -223,10 +223,10 @@ void sangtea() {
 	else {
 		printf("citizen : stay %d(agro:%d->%d)\n", c, sagro + 1, sagro);
 	}
-	if (percent < zprob) { 	//Á»ºñ»óÅÂÃâ·Â-¿òÁ÷¿´À»¶§
+	if (percent < zprob) { 	//ì¢€ë¹„ìƒíƒœì¶œë ¥-ì›€ì§ì˜€ì„ë•Œ
 		sangtea2();
 	}
-	else { //Á»ºñ»óÅÂÃâ·Â-Á¦ÀÚ¸®ÀÏ¶§
+	else { //ì¢€ë¹„ìƒíƒœì¶œë ¥-ì œìë¦¬ì¼ë•Œ
 		sangtea3();
 	}
 }
@@ -388,20 +388,20 @@ void start() {
 	printf("\n");
 }
 void intro() {
-	printf("³ª ");
+	printf("ë‚˜ ");
 	Sleep(1000);
-	printf("Àâ");
+	printf("ì¡");
 	Sleep(1000);
-	printf("¾Æ");
+	printf("ì•„");
 	Sleep(1000);
-	printf("ºÁ");
+	printf("ë´");
 	Sleep(1000);
-	printf("¶ó");
+	printf("ë¼");
 	Sleep(1000);
 	printf("~!\n");
 	Sleep(1000);
 	printf("=====================\n");
-	printf("= ºÎ»êÇó GAME START =\n");
+	printf("= ë¶€ì‚°í—¹ GAME START =\n");
 	printf("=====================\n");
 	Sleep(2000);
 }
